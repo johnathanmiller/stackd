@@ -1,0 +1,91 @@
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+ul#stack {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  margin: 45px auto 0;
+}
+ul#stack li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+ul#stack li:hover:not(:first-child) {
+  opacity: 1;
+  -webkit-transform: translate(5px, -10px);\
+  transform: translate(5px, -10px);
+}
+ul#stack li:not(:first-child) .stack-slide h3 {
+  opacity: 0.5;
+}
+ul#stack li .stack-slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+ul#stack li .stack-slide h3 {
+  display: block;
+  color: #444444;
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  margin: 0;
+  position: absolute;
+  bottom: 38px;
+  left: -80px;
+}
+ul#stack li .stack-slide a {
+  display: block;
+  color: #ffffff;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+ul#stack li .stack-slide a:hover {
+  text-decoration: none;
+}
+
+#stack-controls {
+  font-size: 36px;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  position: absolute;
+  bottom: -40px;
+  right: 8px;
+}
+#stack-controls #stack-prev,
+#stack-controls #stack-next {
+  color: #444444;
+  cursor: pointer;
+}
+#stack-controls #stack-prev:hover, #stack-controls #stack-prev:focus,
+#stack-controls #stack-next:hover,
+#stack-controls #stack-next:focus {
+  text-decoration: none;
+}
+
+#stack li:not(:first-child) .stack-slide h3 {
+  opacity: 0.5;
+}
+#stack li:not(:first-child) .stack-slide a {
+  visibility: hidden;
+}
