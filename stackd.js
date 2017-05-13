@@ -1,14 +1,14 @@
 (function() {
 
-	this.Stack = function() {
+	this.Stackd = function() {
 
-		this.stack = null;
-		this.stackControls = null;
+		this.stackd = null;
+		this.stackdControls = null;
 		this.prevButton = null;
 		this.nextButton = null;
 
 		var defaults = {
-			id: 'stack',
+			id: 'stackd',
 			controls: true,
 			offset: 15,
 			previousButtonContent: '&larr;',
@@ -29,66 +29,66 @@
 
 	}
 
-	Stack.prototype.init = function() {
+	Stackd.prototype.init = function() {
 		construct.call(this);
-		initializeStackEvents.call(this);
-		sortStack.call(this);
+		initializeStackdEvents.call(this);
+		sortStackd.call(this);
 	}
 
-	Stack.prototype.previous = function(e) {
+	Stackd.prototype.previous = function(e) {
 		e.preventDefault();
-		this.stack.insertBefore(this.stack.children[this.stack.children.length - 1], this.stack.firstChild);
-		sortStack.call(this);
+		this.stackd.insertBefore(this.stackd.children[this.stackd.children.length - 1], this.stackd.firstChild);
+		sortStackd.call(this);
 	}
 
-	Stack.prototype.next = function(e) {
+	Stackd.prototype.next = function(e) {
 		e.preventDefault();
-		this.stack.appendChild(this.stack.children[0]);
-		sortStack.call(this);
+		this.stackd.appendChild(this.stackd.children[0]);
+		sortStackd.call(this);
 	}
 
 	function construct() {
 
 		if (this.options.id) {
-			this.stack = document.getElementById(this.options.id);
+			this.stackd = document.getElementById(this.options.id);
 		}
 
 		if (this.options.controls) {
 
-			this.stackControls = document.createElement('div');
-			this.stackControls.id = 'stack-controls';
+			this.stackdControls = document.createElement('div');
+			this.stackdControls.id = 'stackd-controls';
 
 			this.prevButton = document.createElement('a');
 			this.prevButton.href = '';
-			this.prevButton.id = 'stack-prev';
+			this.prevButton.id = 'stackd-prev';
 			this.prevButton.innerHTML = this.options.previousButtonContent;
 
 			this.nextButton = document.createElement('a');
 			this.nextButton.href = '';
-			this.nextButton.id = 'stack-next';
+			this.nextButton.id = 'stackd-next';
 			this.nextButton.innerHTML = this.options.nextButtonContent;
 
-			this.stackControls.appendChild(this.prevButton);
-			this.stackControls.appendChild(this.nextButton);
+			this.stackdControls.appendChild(this.prevButton);
+			this.stackdControls.appendChild(this.nextButton);
 
-			this.stack.parentNode.appendChild(this.stackControls);
+			this.stackd.parentNode.appendChild(this.stackdControls);
 
 		}
 
 	}
 
-	function sortStack() {
+	function sortStackd() {
 
-		for (var i = 0; i < this.stack.children.length; i++) {
-			this.stack.children[i].style.top = i * -this.options.offset +'px';
-			this.stack.children[i].style.left = i * this.options.offset +'px';
-			this.stack.children[i].style.opacity = 1 / (i + 1);
-			this.stack.children[i].style.zIndex = this.stack.children.length - i;
-			this.stack.children[i].style.visibility = (i <= 2) ? 'visible' : 'hidden';
+		for (var i = 0; i < this.stackd.children.length; i++) {
+			this.stackd.children[i].style.top = i * -this.options.offset +'px';
+			this.stackd.children[i].style.left = i * this.options.offset +'px';
+			this.stackd.children[i].style.opacity = 1 / (i + 1);
+			this.stackd.children[i].style.zIndex = this.stackd.children.length - i;
+			this.stackd.children[i].style.visibility = (i <= 2) ? 'visible' : 'hidden';
 		}
 	}
 
-	function initializeStackEvents() {
+	function initializeStackdEvents() {
 
 		if (this.options.controls) {
 			this.prevButton.addEventListener('click', this.previous.bind(this));

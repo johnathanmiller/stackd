@@ -8,13 +8,13 @@ body {
   background-color: #fafafa;
 }
 
-ul#stack {
+ul#stackd {
   width: 100%;
   height: 350px;
   position: relative;
   margin: 45px auto 0;
 }
-ul#stack li {
+ul#stackd li {
   display: block;
   width: 100%;
   height: 100%;
@@ -27,20 +27,20 @@ ul#stack li {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-ul#stack li:hover:not(:first-child) {
+ul#stackd li:hover:not(:first-child) {
   opacity: 1;
   -webkit-transform: translate(5px, -10px);\
   transform: translate(5px, -10px);
 }
-ul#stack li:not(:first-child) .stack-slide h3 {
+ul#stackd li:not(:first-child) .stackd-slide h3 {
   opacity: 0.5;
 }
-ul#stack li .stack-slide {
+ul#stackd li .stackd-slide {
   display: block;
   width: 100%;
   height: 100%;
 }
-ul#stack li .stack-slide h3 {
+ul#stackd li .stackd-slide h3 {
   display: block;
   color: #444444;
   font-size: 40px;
@@ -53,18 +53,18 @@ ul#stack li .stack-slide h3 {
   bottom: 38px;
   left: -80px;
 }
-ul#stack li .stack-slide a {
+ul#stackd li .stackd-slide a {
   display: block;
   color: #ffffff;
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
-ul#stack li .stack-slide a:hover {
+ul#stackd li .stackd-slide a:hover {
   text-decoration: none;
 }
 
-#stack-controls {
+#stackd-controls {
   font-size: 36px;
   font-family: sans-serif;
   letter-spacing: 5px;
@@ -72,20 +72,20 @@ ul#stack li .stack-slide a:hover {
   bottom: -40px;
   right: 8px;
 }
-#stack-controls #stack-prev,
-#stack-controls #stack-next {
+#stackd-controls #stackd-prev,
+#stackd-controls #stackd-next {
   color: #444444;
   cursor: pointer;
 }
-#stack-controls #stack-prev:hover, #stack-controls #stack-prev:focus,
-#stack-controls #stack-next:hover,
-#stack-controls #stack-next:focus {
+#stackd-controls #stackd-prev:hover, #stackd-controls #stackd-prev:focus,
+#stackd-controls #stackd-next:hover,
+#stackd-controls #stackd-next:focus {
   text-decoration: none;
 }
 
-#stack li:not(:first-child) .stack-slide h3 {
+#stackd li:not(:first-child) .stackd-slide h3 {
   opacity: 0.5;
 }
-#stack li:not(:first-child) .stack-slide a {
+#stackd li:not(:first-child) .stackd-slide a {
   visibility: hidden;
 }

@@ -20,33 +20,33 @@
 		<div class="col-sm-8 col-sm-offset-2 text-center">
 			<h1>Stackd.js Slider Demo</h1>
 			<span>Download on <a href="https://github.com/johnathanmiller/stackd"><i class="fa fa-github"></i> GitHub</a> &copy; 2017 by <a href="https://johnathanmiller.com" target="new">Johnathan Miller</a>
-			<ul id="stack">
+			<ul id="stackd">
 				<li>
-					<div class="stack-slide" style="background: url('https://images.unsplash.com/photo-1489924034176-2e678c29d4c6?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=') no-repeat center; background-size: cover; position: relative;">
+					<div class="stackd-slide" style="background: url('https://images.unsplash.com/photo-1489924034176-2e678c29d4c6?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=') no-repeat center; background-size: cover; position: relative;">
 						<h3>Slide 1</h3>
 						<a href="https://unsplash.com/?photo=zc4MEZMdXhc">Wolf in Snow</a>
 					</div>
 				</li>
 				<li>
-					<div class="stack-slide" style="background: url('https://images.unsplash.com/photo-1438030332662-97751637dcd3?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=') no-repeat center; background-size: cover; position: relative;">
+					<div class="stackd-slide" style="background: url('https://images.unsplash.com/photo-1438030332662-97751637dcd3?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=') no-repeat center; background-size: cover; position: relative;">
 						<h3>Slide 2</h3>
 						<a href="https://unsplash.com/?photo=MdFBcEMBytc">Baba Sheep</a>
 					</div>
 				</li>
 				<li>
-					<div class="stack-slide" style="background: url('https://images.unsplash.com/photo-1489960614773-0ff4c0b837e4?dpr=2&auto=format&fit=crop&w=1500&h=805&q=80&cs=tinysrgb&crop=&bg=') no-repeat center; background-size: cover; position: relative;">
+					<div class="stackd-slide" style="background: url('https://images.unsplash.com/photo-1489960614773-0ff4c0b837e4?dpr=2&auto=format&fit=crop&w=1500&h=805&q=80&cs=tinysrgb&crop=&bg=') no-repeat center; background-size: cover; position: relative;">
 						<h3>Slide 3</h3>
 						<a href="https://unsplash.com/?photo=pULttj3sqEY">Chameleon</a>
 					</div>
 				</li>
 				<li>
-					<div class="stack-slide" style="background: url('https://images.unsplash.com/photo-1487241281672-301e0f542588?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=') no-repeat center; background-size: cover; position: relative;">
+					<div class="stackd-slide" style="background: url('https://images.unsplash.com/photo-1487241281672-301e0f542588?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=') no-repeat center; background-size: cover; position: relative;">
 						<h3>Slide 4</h3>
 						<a href="https://unsplash.com/?photo=DCtwjzQ9uVE">Foxes of Zao, Japan</a>
 					</div>
 				</li>
 				<li>
-					<div class="stack-slide" style="background: url('https://images.unsplash.com/photo-1491328480217-db46cf0876c5?dpr=2&auto=format&fit=crop&w=1500&h=999&q=80&cs=tinysrgb&crop=&bg=') no-repeat center; background-size: cover; position: relative;">
+					<div class="stackd-slide" style="background: url('https://images.unsplash.com/photo-1491328480217-db46cf0876c5?dpr=2&auto=format&fit=crop&w=1500&h=999&q=80&cs=tinysrgb&crop=&bg=') no-repeat center; background-size: cover; position: relative;">
 						<h3>Slide 5</h3>
 						<a href="https://unsplash.com/?photo=n6I2GT_Pij4">Alert Owl</a>
 					</div>
@@ -57,13 +57,13 @@
 
 	<script src="./stackd.min.js"></script>
 	<script>
-		let stack = new Stack({
-			id: 'stack',
+		let stackd = new Stackd({
+			id: 'stackd',
 			offset: 15,
 			previousButtonContent: '<i class="fa fa-fw fa-long-arrow-left"></i>',
 			nextButtonContent: '<i class="fa fa-fw fa-long-arrow-right"></i>'
 		});
-		stack.init();
+		stackd.init();
 	</script>
 
 </body>
