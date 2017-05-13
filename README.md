@@ -11,3 +11,12 @@
 	stackd.init();
 </script>
 ```
+
+## Options
+| option | description | default |
+| ------ | ----------- | ------- |
+| id | id name for slider container | "stackd" |
+| controls | displays previous/next buttons for slider | true |
+| offset | offset of each visible slide | 15 |
+| previousButtonContent | html/text inside previous button | "&amp;larr;"
+| nextButtonContent | html/text inside next button | "&amp;rarr;"
