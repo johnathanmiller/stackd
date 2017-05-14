@@ -1,6 +1,17 @@
 # Stackd.js Slider
 [Demo](https://johnathanmiller.github.io/stackd/demo.html 'Stackd.js Slider Demo')
 
+## HTML
+```html
+<ul id="stackd">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+```
+
 ## Integration
 ```js
 <script src="./stackd.min.js"></script>
