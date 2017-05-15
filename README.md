@@ -31,3 +31,13 @@
 | offset | offset of each visible slide | 15 |
 | previousButtonContent | html/text inside previous button | "&amp;larr;"
 | nextButtonContent | html/text inside next button | "&amp;rarr;"
+
+---
+
+## Todo
+- Support for multiple sliders
+- Keyboard left/right controls
+- Option to change offset direction
+- Option to change visible slide count
+- Auto rotate and speed setting
+- Support intergration as jQuery plugin
