@@ -10,7 +10,9 @@
 		var defaults = {
 			id: 'stackd',
 			controls: true,
+			keyboard: false,
 			offset: 15,
+			visible: 3,
 			previousButtonContent: '&larr;',
 			nextButtonContent: '&rarr;'
 		}
@@ -45,6 +47,20 @@
 		e.preventDefault();
 		this.stackd.appendChild(this.stackd.children[0]);
 		sortStackd.call(this);
+	}
+
+	Stackd.prototype.keyPress = function(e) {
+		e.preventDefault();
+
+		if (e.keyCode === 37) {
+			this.stackd.insertBefore(this.stackd.children[this.stackd.children.length - 1], this.stackd.firstChild);
+			sortStackd.call(this);
+
+		} else if (e.keyCode === 39) {
+			this.stackd.appendChild(this.stackd.children[0]);
+			sortStackd.call(this);
+
+		}
 	}
 
 	function construct() {
@@ -84,7 +100,7 @@
 			this.stackd.children[i].style.left = i * this.options.offset +'px';
 			this.stackd.children[i].style.opacity = 1 / (i + 1);
 			this.stackd.children[i].style.zIndex = this.stackd.children.length - i;
-			this.stackd.children[i].style.visibility = (i <= 2) ? 'visible' : 'hidden';
+			this.stackd.children[i].style.visibility = (i <= (this.options.visible - 1)) ? 'visible' : 'hidden';
 		}
 	}
 
@@ -93,6 +109,10 @@
 		if (this.options.controls) {
 			this.prevButton.addEventListener('click', this.previous.bind(this));
 			this.nextButton.addEventListener('click', this.next.bind(this));
+		}
+
+		if (this.options.keyboard) {
+			document.onkeydown = this.keyPress.bind(this);
 		}
 
 	}
