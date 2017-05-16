@@ -28,7 +28,7 @@
 | ------ | ----------- | ------- |
 | id | id name for slider container | "stackd" |
 | controls | displays previous/next buttons for slider | true |
-| keyboad | allows &larr; &rarr; keyboard keys to alternate slides | false
+| keyboard | allows &larr; &rarr; keyboard keys to alternate slides | false
 | offset | offset of each visible slide | 15 |
 | visible | number of visible slides | 3
 | previousButtonContent | html/text inside previous button | "&amp;larr;"
@@ -42,4 +42,4 @@
 - Option to change offset direction
 - ~~Option to change visible slide count~~
 - Auto rotate and speed setting
-- Support intergration as jQuery plugin
+- Support integration as jQuery plugin
